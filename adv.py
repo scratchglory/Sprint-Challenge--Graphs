@@ -31,7 +31,7 @@ player = Player(world.starting_room)
 traversal_path = []
 
 # Get the reverse direction
-reverse_dir = {
+rev_dir = {
     "n": "s",
     "s": "n",
     "e": "w",
@@ -69,7 +69,7 @@ while len(rooms) < len(room_graph) - 1:
     # Append to the traversal path
     traversal_path.append(e_dir)
     # Append the reverse direction to reverse path
-    reverse_path.append(reverse_dir[e_dir])
+    reverse_path.append(rev_dir[e_dir])
     # Ravel to next room
     player.travel(e_dir)
 
